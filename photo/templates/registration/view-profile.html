@@ -1,0 +1,21 @@
+{%extends 'photos/base.html'%}
+
+{% block content %}
+
+{%for profiles in profile %}
+<div class="container">
+
+  <div class="row">
+      
+    <img src="{{ profiles.picture_Main_pic.url }}" >
+    <h2 class="text-center">{{profiles.name}}</h2>
+    <h3 class="text-center">{{profiles.bio}}</h3>
+    
+      
+  </div>
+</div>
+{%empty%}
+<p>ggg</p>
+{%endfor%}
+
+{% endblock %}
