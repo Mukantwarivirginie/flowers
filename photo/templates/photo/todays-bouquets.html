@@ -1,0 +1,37 @@
+{%extends 'photos/base.html'%}
+{% block content %} 
+{{ block.super}}
+
+<div class="container">
+<h1 class="text-center">Welcome to the awwards web application</h1>
+
+  <div class="row">
+    {% for news_item in projects %}
+    <div class="col-md-6">
+
+  
+   
+     
+        <h2 class="text-centered" style="margin-left:100px;"> {{ news_item.title }} </h2>
+      
+  
+      
+    
+        <img src="{{news_item.picture_Main_pic.url}}"  alt="Image" width="300px" height="300px" style="margin-left:100px;"><br><br><br><br>
+
+  
+  
+    </div>
+  <br>
+  {% empty %}
+ 
+    <h2 class="text-center">There no photos Awwards</h2>
+  
+  {% endfor %}
+</div>
+ 
+
+{% endblock %}
+
+</div>
+
